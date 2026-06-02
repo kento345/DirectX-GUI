@@ -67,3 +67,11 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+#C++DirectX12プロジェクト時の追加
+# projects
+.vs/
+*.vcxproj.user
+x64/
+x86/
+Win32/
