@@ -16,9 +16,6 @@
     <Filter Include="asset">
       <UniqueIdentifier>{73225e48-1ee8-4749-9fcf-ae3f3e180f0f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="directx">
-      <UniqueIdentifier>{400ab31a-8bff-4d1b-ac26-cbf3f7a1c590}</UniqueIdentifier>
-    </Filter>
     <Filter Include="draw_resorce">
       <UniqueIdentifier>{25de7814-b58c-4dfa-bf74-9fbc1af79b57}</UniqueIdentifier>
     </Filter>
@@ -40,5 +37,27 @@
     <Filter Include="window">
       <UniqueIdentifier>{fb251fb0-cc92-49a6-8cfc-9169b43f0888}</UniqueIdentifier>
     </Filter>
+    <Filter Include="directx">
+      <UniqueIdentifier>{48b6589c-ebd4-4cff-ac1b-0b5406392829}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="util.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\Devie.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\DXGI.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="directx\Devie.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\DXGI.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
