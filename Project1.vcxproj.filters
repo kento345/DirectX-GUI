@@ -51,12 +51,18 @@
     <ClInclude Include="directx\DXGI.h">
       <Filter>directx</Filter>
     </ClInclude>
+    <ClInclude Include="directx\Fence.h">
+      <Filter>directx</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx\Devie.cpp">
       <Filter>directx</Filter>
     </ClCompile>
     <ClCompile Include="directx\DXGI.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Fence.cpp">
       <Filter>directx</Filter>
     </ClCompile>
   </ItemGroup>

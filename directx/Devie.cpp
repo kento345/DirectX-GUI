@@ -19,3 +19,16 @@ bool Device::create() noexcept {
 	}
 	return true;
 }
+
+//デバイス取得
+ID3D12Device* Device::get()const noexcept {
+	if (!device_) {
+		assert(false && "デバイスが未作成です");
+	}
+	return device_.Get();
+}
+
+//インスタンス取得
+const DXGI& Device::dxgi()const noexcept {
+	return dxgiInstance_;
+}
