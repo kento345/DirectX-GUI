@@ -28,9 +28,6 @@
     <Filter Include="external">
       <UniqueIdentifier>{3c191794-6d3e-4533-b7cb-aa6cb25e6162}</UniqueIdentifier>
     </Filter>
-    <Filter Include="object">
-      <UniqueIdentifier>{ee62c583-15cf-4f46-b678-84310a14d684}</UniqueIdentifier>
-    </Filter>
     <Filter Include="render">
       <UniqueIdentifier>{85c10c33-eef3-40b2-a092-e20fe992ed18}</UniqueIdentifier>
     </Filter>
@@ -40,12 +37,15 @@
     <Filter Include="directx">
       <UniqueIdentifier>{48b6589c-ebd4-4cff-ac1b-0b5406392829}</UniqueIdentifier>
     </Filter>
+    <Filter Include="object">
+      <UniqueIdentifier>{ee62c583-15cf-4f46-b678-84310a14d684}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="util.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="directx\Devie.h">
+    <ClInclude Include="directx\Device.h">
       <Filter>directx</Filter>
     </ClInclude>
     <ClInclude Include="directx\DXGI.h">
@@ -54,15 +54,21 @@
     <ClInclude Include="directx\Fence.h">
       <Filter>directx</Filter>
     </ClInclude>
+    <ClInclude Include="directx\Shader.h">
+      <Filter>directx</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="directx\Devie.cpp">
+    <ClCompile Include="directx\Device.cpp">
       <Filter>directx</Filter>
     </ClCompile>
     <ClCompile Include="directx\DXGI.cpp">
       <Filter>directx</Filter>
     </ClCompile>
     <ClCompile Include="directx\Fence.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Shader.cpp">
       <Filter>directx</Filter>
     </ClCompile>
   </ItemGroup>

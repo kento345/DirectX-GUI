@@ -10,7 +10,7 @@ bool Fence::create() noexcept {
 	}
 	//GPU　同期用のイベントハンドルを作成
 	// --------------------ここがエラー----------------------
-	//waitGpuEvent_ = CreateEvent(nullptr, false, false, "WAIT_GPU");
+	waitGpuEvent_ = CreateEvent(nullptr, false, false,L"WAIT_GPU");
 	//-------------------------------------------------------
 	if (!waitGpuEvent_) {
 		assert(false && "GPU 同期用イベントハンドルの作成に失敗しました");

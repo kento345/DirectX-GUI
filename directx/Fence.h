@@ -1,5 +1,5 @@
 #pragma once
-#include"Devie.h"
+#include"Device.h"
 
 //フェンス(CPUとGPUの動機)制御クラス
 class Fence final
@@ -19,6 +19,6 @@ public:
 
 private:
 	Microsoft::WRL::ComPtr<ID3D12Fence> fence_{}; //フェンス
-	HANDLE waitGpuEvent_{};                       //GPUとCPU 同期用のイベントハンドル
+	HANDLE                       waitGpuEvent_{}; //GPUとCPU 同期用のイベントハンドル
 };
 
