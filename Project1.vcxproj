@@ -124,6 +124,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="directx\Command_Allocator.h" />
+    <ClInclude Include="directx\Command_List.h" />
     <ClInclude Include="directx\Device.h" />
     <ClInclude Include="directx\DXGI.h" />
     <ClInclude Include="directx\Fence.h" />
@@ -131,6 +133,8 @@
     <ClInclude Include="util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="directx\Command_Allocator.cpp" />
+    <ClCompile Include="directx\Command_List.cpp" />
     <ClCompile Include="directx\Device.cpp" />
     <ClCompile Include="directx\DXGI.cpp" />
     <ClCompile Include="directx\Fence.cpp" />

@@ -29,3 +29,19 @@ bool Shader::create(std::string_view filePath) noexcept {
 	return true;
 }
 
+//頂点シェーダ取得
+ID3DBlob* Shader::vertexShader()const noexcept{
+	if (!vertexShader_) {
+		assert(false && "頂点シェーダが未作成です");
+	}
+
+	return vertexShader_.Get();
+}
+
+//ピクセルシェーダ取得
+ID3DBlob* Shader::pixelShader()const noexcept {
+	if (!pixelShader_) {
+		assert(false && "ピクセルシェーダが未作成です");
+	}
+	return pixelShader_.Get();
+}

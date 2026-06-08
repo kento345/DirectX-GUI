@@ -57,6 +57,12 @@
     <ClInclude Include="directx\Shader.h">
       <Filter>directx</Filter>
     </ClInclude>
+    <ClInclude Include="directx\Command_Allocator.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\Command_List.h">
+      <Filter>directx</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx\Device.cpp">
@@ -69,6 +75,12 @@
       <Filter>directx</Filter>
     </ClCompile>
     <ClCompile Include="directx\Shader.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Command_Allocator.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Command_List.cpp">
       <Filter>directx</Filter>
     </ClCompile>
   </ItemGroup>
