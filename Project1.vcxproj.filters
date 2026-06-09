@@ -63,6 +63,9 @@
     <ClInclude Include="directx\Command_List.h">
       <Filter>directx</Filter>
     </ClInclude>
+    <ClInclude Include="directx\Command_Queue.h">
+      <Filter>directx</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx\Device.cpp">
@@ -81,6 +84,9 @@
       <Filter>directx</Filter>
     </ClCompile>
     <ClCompile Include="directx\Command_List.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Command_Queue.cpp">
       <Filter>directx</Filter>
     </ClCompile>
   </ItemGroup>
