@@ -18,3 +18,11 @@ bool Command_Queue::create() noexcept {
 	}
 	return true;
 }
+
+//コマンドキューの取得
+ID3D12CommandQueue* Command_Queue::get() const noexcept {
+	if (!commanQueue_) {
+		assert(false && "コマンドキューが未作成です");
+	}
+	return commanQueue_.Get();
+}
