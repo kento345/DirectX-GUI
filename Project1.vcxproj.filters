@@ -34,16 +34,16 @@
     <Filter Include="window">
       <UniqueIdentifier>{fb251fb0-cc92-49a6-8cfc-9169b43f0888}</UniqueIdentifier>
     </Filter>
-    <Filter Include="directx">
-      <UniqueIdentifier>{48b6589c-ebd4-4cff-ac1b-0b5406392829}</UniqueIdentifier>
-    </Filter>
     <Filter Include="object">
       <UniqueIdentifier>{ee62c583-15cf-4f46-b678-84310a14d684}</UniqueIdentifier>
     </Filter>
+    <Filter Include="directx">
+      <UniqueIdentifier>{6a8c495c-5082-4cdb-9884-0fbd1ebcfdd4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="util.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="directx\Descriptor_heap.h">
+      <Filter>directx</Filter>
     </ClInclude>
     <ClInclude Include="directx\Device.h">
       <Filter>directx</Filter>
@@ -65,6 +65,9 @@
     </ClInclude>
     <ClInclude Include="directx\Command_Queue.h">
       <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="window\Window.h">
+      <Filter>window</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +91,15 @@
     </ClCompile>
     <ClCompile Include="directx\Command_Queue.cpp">
       <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Descriptor_heap.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="window\Window.cpp">
+      <Filter>window</Filter>
+    </ClCompile>
+    <ClCompile Include="entry.cpp">
+      <Filter>entry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

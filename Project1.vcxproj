@@ -127,20 +127,24 @@
     <ClInclude Include="directx\Command_Allocator.h" />
     <ClInclude Include="directx\Command_List.h" />
     <ClInclude Include="directx\Command_Queue.h" />
+    <ClInclude Include="directx\Descriptor_heap.h" />
     <ClInclude Include="directx\Device.h" />
     <ClInclude Include="directx\DXGI.h" />
     <ClInclude Include="directx\Fence.h" />
     <ClInclude Include="directx\Shader.h" />
-    <ClInclude Include="util.h" />
+    <ClInclude Include="window\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx\Command_Allocator.cpp" />
     <ClCompile Include="directx\Command_List.cpp" />
     <ClCompile Include="directx\Command_Queue.cpp" />
+    <ClCompile Include="directx\Descriptor_heap.cpp" />
     <ClCompile Include="directx\Device.cpp" />
     <ClCompile Include="directx\DXGI.cpp" />
     <ClCompile Include="directx\Fence.cpp" />
     <ClCompile Include="directx\Shader.cpp" />
+    <ClCompile Include="entry.cpp" />
+    <ClCompile Include="window\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
