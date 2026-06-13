@@ -14,8 +14,15 @@ public:
 
 public:
 	//ディスクリプタヒープを生成する
-	D3D12_DESCRIPTOR_HEAP_DESC heapDesc{};
-	//heapDesc.Type = 
+	bool create(D3D12_DESCRIPTOR_HEAP_TYPE type, UINT numDescriptors, bool shaderVisible = false)noexcept {
+		D3D12_DESCRIPTOR_HEAP_DESC heapDesc{};
+		heapDesc.Type = type;
+		heapDesc.NumDescriptors = numDescriptors;
+		heapDesc.Flags = shaderVisible ? D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE : D3D12_DESCRIPTOR_HEAP_FLAG_NONE;
+
+	}
+
+
 
 
 
