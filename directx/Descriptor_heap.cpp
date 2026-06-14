@@ -91,4 +91,66 @@ private:
 	std::vector<UINT> pendingFreeIndices_{};//解放待ちディスクリプタインデックスのリスト
 };
 
-//
+//コンストラクタ
+
+DescriptorHeapContainer::DescriptorHeapContainer() = default;
+
+//デストラクタ
+DescriptorHeapContainer::~DescriptorHeapContainer() {
+	map_.clear();
+}
+
+//ディスクリプタヒープを生成する
+bool DescriptorHeapContainer::create(D3D12_DESCRIPTOR_HEAP_TYPE type, UINT numDescriptors, bool shaderVisible)noexcept {
+	if (map_.find(type) != map_.end()) {
+		//既に作成済み
+		return false;
+	}
+
+	auto p = std::make_unique<DescriptorHeap>();
+	if (p->create(type, numDescriptors, shaderVisible)) {
+		map_.emplace(type, std::move(p));
+	}
+
+	return true;
+}
+
+//解放予約されているディスクリプタを解放する
+void DescriptorHeapContainer::applyPendingFree()noexcept {
+	for (auto& [key, p] : map_) {
+		p->applyPendingFree();
+	}
+}
+
+//ディスクリプタヒープを取得する
+ID3D12DescriptorHeap* DescriptorHeapContainer::get(D3D12_DESCRIPTOR_HEAP_TYPE type)const noexcept {
+	const auto it = map_.find(type);
+	if (it == map_.end()) {
+		assert(false && "ディスクリプタヒープがありません");
+		return nullptr;
+	}
+
+	//return it->second->get();
+}
+
+//ディスクリプタを確保する
+std::optional<UINT> DescriptorHeapContainer::allocatorDescriptor(D3D12_DESCRIPTOR_HEAP_TYPE type)noexcept {
+	const auto it = map_.find(type);
+	if (it == map_.end()) {
+		assert(false && "ディスクリプタヒープがありません");
+		return std::nullopt;
+	}
+
+	//return it->second->allocatorDescriptor();
+}
+
+//解放予定のディスクリプタを登録
+
+void DescriptorHeapContainer::releaseDescriptor(D3D12_DESCRIPTOR_HEAP_TYPE type, UINT descriptorIndex)noexcept {
+	const auto it = map_.find(type);
+	if (it == map_.end()) {
+		assert(false && "ディスクリプタヒープがありません");
+	}
+
+	//return it->second->releaseDescriptor(descriptorIndex);
+}
