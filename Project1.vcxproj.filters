@@ -72,6 +72,9 @@
     <ClInclude Include="directx\Constant_Buffer.h">
       <Filter>directx</Filter>
     </ClInclude>
+    <ClInclude Include="directx\DepthBuffer.h">
+      <Filter>directx</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx\Device.cpp">
@@ -105,6 +108,9 @@
       <Filter>entry</Filter>
     </ClCompile>
     <ClCompile Include="directx\Constant_Buffer.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\DepthBuffer.cpp">
       <Filter>directx</Filter>
     </ClCompile>
   </ItemGroup>
