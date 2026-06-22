@@ -20,8 +20,7 @@ public:
 	D3D12_CPU_DESCRIPTOR_HANDLE getCpuDescriptorHandle()const noexcept;
 
 private:
-	//Microsoft::WRL::ComPtr<IID_ID3D12Resource> depthBuffer
-
-
+	Microsoft::WRL::ComPtr<ID3D12Resource> depthBuffer_; //レンダーターゲットリソースの配列
+	D3D12_CPU_DESCRIPTOR_HANDLE handle_{};               //ディスクリプタハンドル
 };
 
