@@ -133,8 +133,10 @@
     <ClInclude Include="directx\Device.h" />
     <ClInclude Include="directx\DXGI.h" />
     <ClInclude Include="directx\Fence.h" />
+    <ClInclude Include="directx\Pipline_State_Object.h" />
+    <ClInclude Include="directx\Root_Signature.h" />
     <ClInclude Include="directx\Shader.h" />
-    <ClInclude Include="Input.h" />
+    <ClInclude Include="window\Input.h" />
     <ClInclude Include="window\Window.h" />
   </ItemGroup>
   <ItemGroup>
@@ -147,9 +149,11 @@
     <ClCompile Include="directx\Device.cpp" />
     <ClCompile Include="directx\DXGI.cpp" />
     <ClCompile Include="directx\Fence.cpp" />
+    <ClCompile Include="directx\Pipline_State_Object.cpp" />
+    <ClCompile Include="directx\Root_Signature.cpp" />
     <ClCompile Include="directx\Shader.cpp" />
     <ClCompile Include="entry.cpp" />
-    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -75,8 +75,14 @@
     <ClInclude Include="directx\DepthBuffer.h">
       <Filter>directx</Filter>
     </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="window\Input.h">
+      <Filter>window</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\Pipline_State_Object.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\Root_Signature.h">
+      <Filter>directx</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -116,8 +122,14 @@
     <ClCompile Include="directx\DepthBuffer.cpp">
       <Filter>directx</Filter>
     </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="window\Input.cpp">
+      <Filter>window</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Pipline_State_Object.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Root_Signature.cpp">
+      <Filter>directx</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

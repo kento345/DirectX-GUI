@@ -1,4 +1,5 @@
 #include "Window.h"
+#include"Input.h"
 
 // ImGui の Win32 メッセージハンドラ（imgui_impl_win32.h 内で宣言済み）
 //extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -58,7 +59,7 @@ HRESULT Window::create(HINSTANCE instance, int width, int height, std::string_vi
 bool Window::messageLoop() const noexcept {
 	MSG msg{};
 
-	//Input::instance().updatePrevKeyState();
+	Input::instance().updatePrevKeyState();
 
 	while (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE)) {
 		if (msg.message == WM_QUIT) {
@@ -73,7 +74,7 @@ bool Window::messageLoop() const noexcept {
 		static byte keyState[256]{};
 		if (GetKeyboardState(keyState)) {
 			// キー情報取得に成功したら、Input クラスに情報を渡す
-			//Input::instance().updateKeyState(keyState);
+			Input::instance().updateKeyState(keyState);
 		}
 	}
 
