@@ -75,6 +75,9 @@
     <ClInclude Include="directx\DepthBuffer.h">
       <Filter>directx</Filter>
     </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx\Device.cpp">
@@ -112,6 +115,9 @@
     </ClCompile>
     <ClCompile Include="directx\DepthBuffer.cpp">
       <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
