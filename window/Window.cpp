@@ -1,5 +1,7 @@
 #include "Window.h"
 #include"Input.h"
+#include<string_view>
+
 
 // ImGui の Win32 メッセージハンドラ（imgui_impl_win32.h 内で宣言済み）
 //extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -21,7 +23,7 @@ namespace {
 }
 
 //ウィンドウの生成
-HRESULT Window::create(HINSTANCE instance, int width, int height, std::string_view name) noexcept {
+HRESULT Window::create(HINSTANCE instance, int width, int height, std::wstring_view name) noexcept {
 	// ウィンドウの定義
 	WNDCLASS wc{};
 	wc.lpfnWndProc = WindowProc;

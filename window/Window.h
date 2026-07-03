@@ -12,7 +12,8 @@ public:
 	}
 
 	//ウィンドウの生成
-	HRESULT create(HINSTANCE instance, int width, int height, std::string_view name) noexcept;
+	//wstring_view は""の前にLをつける
+	HRESULT create(HINSTANCE instance, int width, int height, std::wstring_view name) noexcept;
 
 	//メッセージループ
 	bool messageLoop() const noexcept;
