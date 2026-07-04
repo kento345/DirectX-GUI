@@ -84,6 +84,12 @@
     <ClInclude Include="directx\Root_Signature.h">
       <Filter>directx</Filter>
     </ClInclude>
+    <ClInclude Include="directx\Render_Target.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\Swap_Chain.h">
+      <Filter>directx</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx\Device.cpp">
@@ -129,6 +135,12 @@
       <Filter>directx</Filter>
     </ClCompile>
     <ClCompile Include="directx\Root_Signature.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Render_Target.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Swap_Chain.cpp">
       <Filter>directx</Filter>
     </ClCompile>
   </ItemGroup>

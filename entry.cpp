@@ -5,7 +5,7 @@
 #include<cassert>
 
 namespace {
-	constexpr std::string_view APP_NAME = "MyApp"; //アプリ名
+	constexpr std::wstring_view APP_NAME = L"MyApp"; //アプリ名
 }
 
 class Application final {
