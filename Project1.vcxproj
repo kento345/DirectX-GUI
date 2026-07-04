@@ -138,6 +138,8 @@
     <ClInclude Include="directx\Root_Signature.h" />
     <ClInclude Include="directx\Shader.h" />
     <ClInclude Include="directx\Swap_Chain.h" />
+    <ClInclude Include="draw_resorce\Quad_Polygon.h" />
+    <ClInclude Include="draw_resorce\Shape.h" />
     <ClInclude Include="window\Input.h" />
     <ClInclude Include="window\Window.h" />
   </ItemGroup>
@@ -156,6 +158,8 @@
     <ClCompile Include="directx\Root_Signature.cpp" />
     <ClCompile Include="directx\Shader.cpp" />
     <ClCompile Include="directx\Swap_Chain.cpp" />
+    <ClCompile Include="draw_resorce\Quad_Polygon.cpp" />
+    <ClCompile Include="draw_resorce\Shape.cpp" />
     <ClCompile Include="entry.cpp" />
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />

@@ -77,5 +77,6 @@ float4 ps(PSInput input) : SV_Target
     float contribution = max(luminace - thereshold, 0.0) / max(luminace, 0.0001);
     color.rgb *= contribution;
  
+    
     return color;
 }

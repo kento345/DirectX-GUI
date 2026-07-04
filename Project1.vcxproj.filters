@@ -90,6 +90,12 @@
     <ClInclude Include="directx\Swap_Chain.h">
       <Filter>directx</Filter>
     </ClInclude>
+    <ClInclude Include="draw_resorce\Quad_Polygon.h">
+      <Filter>draw_resorce</Filter>
+    </ClInclude>
+    <ClInclude Include="draw_resorce\Shape.h">
+      <Filter>draw_resorce</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx\Device.cpp">
@@ -142,6 +148,12 @@
     </ClCompile>
     <ClCompile Include="directx\Swap_Chain.cpp">
       <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="draw_resorce\Quad_Polygon.cpp">
+      <Filter>draw_resorce</Filter>
+    </ClCompile>
+    <ClCompile Include="draw_resorce\Shape.cpp">
+      <Filter>draw_resorce</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
