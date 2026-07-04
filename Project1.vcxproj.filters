@@ -144,4 +144,18 @@
       <Filter>directx</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="shader.hlsli">
+      <Filter>asset</Filter>
+    </None>
+    <None Include="screen_texture.hlsli">
+      <Filter>asset</Filter>
+    </None>
+    <None Include="down_sample.hlsli">
+      <Filter>asset</Filter>
+    </None>
+    <None Include="blur.hlsli">
+      <Filter>asset</Filter>
+    </None>
+  </ItemGroup>
 </Project>

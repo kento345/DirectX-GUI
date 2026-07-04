@@ -119,6 +119,7 @@ D3D12_CPU_DESCRIPTOR_HANDLE Render_Target::getCpuDescriptorHandle(UINT index)con
 	return handle;
 }
 
+//GPU用のディスクリプタハンドルの取得
 D3D12_GPU_DESCRIPTOR_HANDLE Render_Target::getGpuDescriptorHandle(UINT index)const noexcept {
 	if (index >= renderTargets_.size() || !renderTargets_[index] || srvDescriptorIndex_.size() != renderTargets_.size()) {
 		assert(false && "不正なレンダーターゲット");
@@ -137,7 +138,7 @@ D3D12_GPU_DESCRIPTOR_HANDLE Render_Target::getGpuDescriptorHandle(UINT index)con
 	return handle_;
 }
 
-//レンダーターゲットを取得s
+//レンダーターゲットを取得
 ID3D12Resource* Render_Target::get(UINT index) const noexcept {
 	if (index >= renderTargets_.size() || !renderTargets_[index]) {
 		assert(false && "不正なレンダーターゲットです");
@@ -157,6 +158,7 @@ std::pair<UINT, UINT> Render_Target::size()const noexcept {
 	const auto desc = renderTargets_[0]->GetDesc();
 	return { static_cast<UINT>(desc.Width),static_cast<UINT>(desc.Height) };
 }
+
 //ビュー(ディスクリプタハンドル)を作成する
 bool Render_Target::createRenderTargetView()noexcept {
 	constexpr auto heapType = D3D12_DESCRIPTOR_HEAP_TYPE_RTV;
@@ -187,6 +189,8 @@ bool Render_Target::createRenderTargetView()noexcept {
 	}
 	return true;
 }
+
+//シェーダリソースビューを作成
 bool Render_Target::createShaderResourceView()noexcept {
 	constexpr auto heapType = D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV;
 
@@ -217,7 +221,7 @@ bool Render_Target::createShaderResourceView()noexcept {
 		//シェーダーリソースビューを作成してディスクリプタヒープのハンドルと関連付ける
 		Device::instance().get()->CreateShaderResourceView(renderTargets_[i].Get(), &desc, cpuHandle);
 
-		rtvDescriptorIndex_.emplace_back(index);
+		srvDescriptorIndex_.emplace_back(index);
 	}
 
 	return true;

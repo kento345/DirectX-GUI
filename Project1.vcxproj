@@ -160,6 +160,12 @@
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="blur.hlsli" />
+    <None Include="down_sample.hlsli" />
+    <None Include="screen_texture.hlsli" />
+    <None Include="shader.hlsli" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
