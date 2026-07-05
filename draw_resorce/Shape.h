@@ -14,6 +14,10 @@ public:
 	//デスクリプタ
 	virtual ~Shape() = default;
 
+	//ポリゴンの生成
+    //成功すればtrueを返す
+	bool create()noexcept;
+
 	//ポリゴンの描写
 	void draw(const Command_List& commandList)noexcept;
 
