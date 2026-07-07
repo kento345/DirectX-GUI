@@ -37,6 +37,12 @@
     <Filter Include="directx">
       <UniqueIdentifier>{6a8c495c-5082-4cdb-9884-0fbd1ebcfdd4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="editor\content">
+      <UniqueIdentifier>{aa770762-01b3-4075-8c8d-1961d6179244}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\post_proc">
+      <UniqueIdentifier>{c0df3066-c21d-4ded-a997-db398cfbd7a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="directx\Descriptor_heap.h">
@@ -104,6 +110,15 @@
     </ClInclude>
     <ClInclude Include="editor\ImGuiManager.h">
       <Filter>editor</Filter>
+    </ClInclude>
+    <ClInclude Include="editor\content\Bulur_Editor.h">
+      <Filter>editor\content</Filter>
+    </ClInclude>
+    <ClInclude Include="editor\content\Game_Object_Editor.h">
+      <Filter>editor\content</Filter>
+    </ClInclude>
+    <ClInclude Include="render\post_proc\Bulur.h">
+      <Filter>render\post_proc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +190,15 @@
     </ClCompile>
     <ClCompile Include="editor\ImGuiManager.cpp">
       <Filter>editor</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\content\Bulur_Editor.cpp">
+      <Filter>editor\content</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\content\Game_Object_Editor.cpp">
+      <Filter>editor\content</Filter>
+    </ClCompile>
+    <ClCompile Include="render\post_proc\Bulur.cpp">
+      <Filter>render\post_proc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
