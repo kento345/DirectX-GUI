@@ -139,7 +139,11 @@
     <ClInclude Include="directx\Shader.h" />
     <ClInclude Include="directx\Swap_Chain.h" />
     <ClInclude Include="draw_resorce\Quad_Polygon.h" />
+    <ClInclude Include="draw_resorce\Screen_Polygon.h" />
     <ClInclude Include="draw_resorce\Shape.h" />
+    <ClInclude Include="draw_resorce\Shape_Container.h" />
+    <ClInclude Include="draw_resorce\Triangle_Polygon.h" />
+    <ClInclude Include="editor\ImGuiManager.h" />
     <ClInclude Include="window\Input.h" />
     <ClInclude Include="window\Window.h" />
   </ItemGroup>
@@ -159,8 +163,12 @@
     <ClCompile Include="directx\Shader.cpp" />
     <ClCompile Include="directx\Swap_Chain.cpp" />
     <ClCompile Include="draw_resorce\Quad_Polygon.cpp" />
+    <ClCompile Include="draw_resorce\Screen_Polygon.cpp" />
     <ClCompile Include="draw_resorce\Shape.cpp" />
-    <ClCompile Include="entry.cpp" />
+    <ClCompile Include="draw_resorce\Shape_Container.cpp" />
+    <ClCompile Include="draw_resorce\Triangle_Polygon.cpp" />
+    <ClCompile Include="editor\ImGuiManager.cpp" />
+    <ClCompile Include="entry\entry.cpp" />
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />
   </ItemGroup>

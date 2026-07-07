@@ -25,9 +25,6 @@
     <Filter Include="entry">
       <UniqueIdentifier>{ad79166f-b5e3-4a5c-a2e9-5ddb80de914d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="external">
-      <UniqueIdentifier>{3c191794-6d3e-4533-b7cb-aa6cb25e6162}</UniqueIdentifier>
-    </Filter>
     <Filter Include="render">
       <UniqueIdentifier>{85c10c33-eef3-40b2-a092-e20fe992ed18}</UniqueIdentifier>
     </Filter>
@@ -96,6 +93,18 @@
     <ClInclude Include="draw_resorce\Shape.h">
       <Filter>draw_resorce</Filter>
     </ClInclude>
+    <ClInclude Include="draw_resorce\Screen_Polygon.h">
+      <Filter>draw_resorce</Filter>
+    </ClInclude>
+    <ClInclude Include="draw_resorce\Shape_Container.h">
+      <Filter>draw_resorce</Filter>
+    </ClInclude>
+    <ClInclude Include="draw_resorce\Triangle_Polygon.h">
+      <Filter>draw_resorce</Filter>
+    </ClInclude>
+    <ClInclude Include="editor\ImGuiManager.h">
+      <Filter>editor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx\Device.cpp">
@@ -125,9 +134,6 @@
     <ClCompile Include="window\Window.cpp">
       <Filter>window</Filter>
     </ClCompile>
-    <ClCompile Include="entry.cpp">
-      <Filter>entry</Filter>
-    </ClCompile>
     <ClCompile Include="directx\Constant_Buffer.cpp">
       <Filter>directx</Filter>
     </ClCompile>
@@ -154,6 +160,21 @@
     </ClCompile>
     <ClCompile Include="draw_resorce\Shape.cpp">
       <Filter>draw_resorce</Filter>
+    </ClCompile>
+    <ClCompile Include="draw_resorce\Screen_Polygon.cpp">
+      <Filter>draw_resorce</Filter>
+    </ClCompile>
+    <ClCompile Include="draw_resorce\Shape_Container.cpp">
+      <Filter>draw_resorce</Filter>
+    </ClCompile>
+    <ClCompile Include="draw_resorce\Triangle_Polygon.cpp">
+      <Filter>draw_resorce</Filter>
+    </ClCompile>
+    <ClCompile Include="entry\entry.cpp">
+      <Filter>entry</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\ImGuiManager.cpp">
+      <Filter>editor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
