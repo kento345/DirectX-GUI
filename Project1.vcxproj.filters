@@ -111,14 +111,14 @@
     <ClInclude Include="editor\ImGuiManager.h">
       <Filter>editor</Filter>
     </ClInclude>
-    <ClInclude Include="editor\content\Bulur_Editor.h">
-      <Filter>editor\content</Filter>
-    </ClInclude>
     <ClInclude Include="editor\content\Game_Object_Editor.h">
       <Filter>editor\content</Filter>
     </ClInclude>
-    <ClInclude Include="render\post_proc\Bulur.h">
+    <ClInclude Include="render\post_proc\Blur.h">
       <Filter>render\post_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="editor\content\Blur_Editor.h">
+      <Filter>editor\content</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -191,14 +191,14 @@
     <ClCompile Include="editor\ImGuiManager.cpp">
       <Filter>editor</Filter>
     </ClCompile>
-    <ClCompile Include="editor\content\Bulur_Editor.cpp">
-      <Filter>editor\content</Filter>
-    </ClCompile>
     <ClCompile Include="editor\content\Game_Object_Editor.cpp">
       <Filter>editor\content</Filter>
     </ClCompile>
-    <ClCompile Include="render\post_proc\Bulur.cpp">
+    <ClCompile Include="render\post_proc\Blur.cpp">
       <Filter>render\post_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\content\Blur_Editor.cpp">
+      <Filter>editor\content</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -143,10 +143,10 @@
     <ClInclude Include="draw_resorce\Shape.h" />
     <ClInclude Include="draw_resorce\Shape_Container.h" />
     <ClInclude Include="draw_resorce\Triangle_Polygon.h" />
-    <ClInclude Include="editor\content\Bulur_Editor.h" />
+    <ClInclude Include="editor\content\Blur_Editor.h" />
     <ClInclude Include="editor\content\Game_Object_Editor.h" />
     <ClInclude Include="editor\ImGuiManager.h" />
-    <ClInclude Include="render\post_proc\Bulur.h" />
+    <ClInclude Include="render\post_proc\Blur.h" />
     <ClInclude Include="window\Input.h" />
     <ClInclude Include="window\Window.h" />
   </ItemGroup>
@@ -170,11 +170,11 @@
     <ClCompile Include="draw_resorce\Shape.cpp" />
     <ClCompile Include="draw_resorce\Shape_Container.cpp" />
     <ClCompile Include="draw_resorce\Triangle_Polygon.cpp" />
-    <ClCompile Include="editor\content\Bulur_Editor.cpp" />
+    <ClCompile Include="editor\content\Blur_Editor.cpp" />
     <ClCompile Include="editor\content\Game_Object_Editor.cpp" />
     <ClCompile Include="editor\ImGuiManager.cpp" />
     <ClCompile Include="entry\entry.cpp" />
-    <ClCompile Include="render\post_proc\Bulur.cpp" />
+    <ClCompile Include="render\post_proc\Blur.cpp" />
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />
   </ItemGroup>

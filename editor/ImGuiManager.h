@@ -21,7 +21,7 @@ public:
 public:
 	//ImGuiの初期化
 	bool initialize(
-		HWND hwns,
+		HWND hwnd,
 		ID3D12Device* device,
 		ID3D12CommandQueue* commandQueue,
 		UINT numFrames,
