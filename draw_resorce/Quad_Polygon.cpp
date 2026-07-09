@@ -74,7 +74,7 @@ bool Quad_Polygon::createVertexBuffer()noexcept {
 	vertexBufferView_.StrideInBytes = sizeof(ModelVertex::Vertex);            //1頂点当たりのサイズ
 
 	//トポロジーの設定
-	topology_ = D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP; //四角形を描画するのでTRIANGLESTRIP
+	topology_ = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST; //四角形を描画するのでTRIANGLESTRIP
 	                                  //POINTLIST     :1頂点に1点※点同士は独立(パーティクル)
 	                                  //LINELIST      :2頂点で1本線※線同士は独立(当たり判定表示)
 	                                  //LINESTRIP     :隣の頂点と自動で線にする(playerの移動軌跡)
