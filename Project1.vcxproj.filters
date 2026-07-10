@@ -120,6 +120,27 @@
     <ClInclude Include="editor\content\Blur_Editor.h">
       <Filter>editor\content</Filter>
     </ClInclude>
+    <ClInclude Include="object\Bullet.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\Game_Object.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\Game_Object_Manager.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\Object.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\Player.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\Camera.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\Enemy.h">
+      <Filter>object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx\Device.cpp">
@@ -199,6 +220,27 @@
     </ClCompile>
     <ClCompile Include="editor\content\Blur_Editor.cpp">
       <Filter>editor\content</Filter>
+    </ClCompile>
+    <ClCompile Include="object\Bullet.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\Game_Object.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\Game_Object_Manager.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\Object.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\Player.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\Camera.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\Enemy.cpp">
+      <Filter>object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

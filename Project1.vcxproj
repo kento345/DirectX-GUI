@@ -146,6 +146,13 @@
     <ClInclude Include="editor\content\Blur_Editor.h" />
     <ClInclude Include="editor\content\Game_Object_Editor.h" />
     <ClInclude Include="editor\ImGuiManager.h" />
+    <ClInclude Include="object\Bullet.h" />
+    <ClInclude Include="object\Camera.h" />
+    <ClInclude Include="object\Enemy.h" />
+    <ClInclude Include="object\Game_Object.h" />
+    <ClInclude Include="object\Game_Object_Manager.h" />
+    <ClInclude Include="object\Object.h" />
+    <ClInclude Include="object\Player.h" />
     <ClInclude Include="render\post_proc\Blur.h" />
     <ClInclude Include="window\Input.h" />
     <ClInclude Include="window\Window.h" />
@@ -174,6 +181,13 @@
     <ClCompile Include="editor\content\Game_Object_Editor.cpp" />
     <ClCompile Include="editor\ImGuiManager.cpp" />
     <ClCompile Include="entry\entry.cpp" />
+    <ClCompile Include="object\Bullet.cpp" />
+    <ClCompile Include="object\Camera.cpp" />
+    <ClCompile Include="object\Enemy.cpp" />
+    <ClCompile Include="object\Game_Object.cpp" />
+    <ClCompile Include="object\Game_Object_Manager.cpp" />
+    <ClCompile Include="object\Object.cpp" />
+    <ClCompile Include="object\Player.cpp" />
     <ClCompile Include="render\post_proc\Blur.cpp" />
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />

@@ -1,9 +1,27 @@
 #pragma once
 
 #if defined(_DEBUG)
-class Game_Object_Editor
-{
 
-};
+#include"../../object/Game_Object.h"
+
+namespace dev::editor {
+
+	class Game_Object_Editor
+	{
+	public:
+
+		//コンストラクタ
+		Game_Object_Editor() = default;
+
+		//デストラクタ
+		~Game_Object_Editor() = default;
+
+	public:
+
+		//オブジェクトのImGuiデバッグウィンドウを構築
+		void draw()noexcept;
+	};
+
+}
 #endif
 
