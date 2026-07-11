@@ -6,7 +6,7 @@
 
 namespace dev::editor {
 
-	class Game_Object_Editor
+	class Game_Object_Editor final
 	{
 	public:
 
@@ -21,7 +21,6 @@ namespace dev::editor {
 		//オブジェクトのImGuiデバッグウィンドウを構築
 		void draw()noexcept;
 	};
-
 }
 #endif
 

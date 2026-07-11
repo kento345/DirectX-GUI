@@ -3,7 +3,7 @@
 #include<DirectXMath.h>
 #include"Object.h"
 
-#if difined(_DEBUG0)
+#if defined(_DEBUG)
 namespace dev::editor {
 	class Game_Object_Editor;
 }
@@ -13,10 +13,9 @@ namespace game {
 
 	class Game_Object : public Object
 	{
-#if edfined(_DEBUG)
+#if defined(_DEBUG)
 		friend class dev::editor::Game_Object_Editor;
 #endif
-
 	public:
 		//コンストラクタ
 		Game_Object() = default;
