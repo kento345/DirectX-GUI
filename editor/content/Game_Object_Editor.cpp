@@ -31,19 +31,20 @@ namespace dev::editor {
 				}
 			}
 
-			game::Game_Object_Manager::instance().forEach([&](auto& object){
+			game::Game_Object_Manager::instance().forEach([&](auto& object) {
 				//ウィンドウ: ゲームオブジェクト設定
 				ImGui::PushID(static_cast<int>(object.handle()));
 				const auto text = "オブジェクト:" + std::to_string(object.handle());
 				ImGui::SeparatorText(text.c_str());
 				//色を変更する項目を追加
-				//ImGui::ColorEdit4("色", );
+				ImGui::ColorEdit4("色", &object.color_.x);
 				//位置を変更する項目を追加
-				//ImGui::DragFloat3("位置",&object.world_.r[3])
-			}
+				ImGui::DragFloat3("位置", &object.world_.r[3].m128_f32[0], -1.0f, 1.0f);
+				ImGui::PopID();
+			});
+
+			ImGui::End();
 		}
 	}
 }
-
-
 #endif

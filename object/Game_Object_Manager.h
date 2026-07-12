@@ -34,7 +34,7 @@ namespace game {
 		std::optional<Game_Object*> gameObject(UINT64 handle)noexcept;
 
 		//衝突判定オブジェクトを登録
-		void refisterHit(UINT64 handle)noexcept;
+		void registerHit(UINT64 handle)noexcept;
 
 		//オブジェクト削除登録
 		void registerDelete(UINT64 handle)noexcept;

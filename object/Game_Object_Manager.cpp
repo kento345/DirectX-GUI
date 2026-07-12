@@ -227,7 +227,7 @@ namespace game {
 	}
 
 	//衝突判定オブジェクトを登録
-	void Game_Object_Manager::refisterHit(UINT64 handle)noexcept {
+	void Game_Object_Manager::registerHit(UINT64 handle)noexcept {
 		container_.hit_.emplace_back(handle);
 	}
 
