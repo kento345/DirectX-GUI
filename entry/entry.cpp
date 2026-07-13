@@ -1,6 +1,9 @@
 //ウィンドウアプリケーション
 
 #include"../window/Window.h"
+#include"../window/Input.h"
+
+#include
 
 #include<cassert>
 
