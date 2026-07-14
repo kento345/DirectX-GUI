@@ -1,41 +1,33 @@
 #pragma once
 
-#include<d3d12.h>
-#include<unordered_map>
-#include<optional>
-#include<memory>
+#include <d3d12.h>
+#include <unordered_map>
+#include <optional>
+#include <memory>
 
-class DescriptorHeap;  /// 前方宣言
+class Descriptor_Heap;  /// 前方宣言
 
-//---------------------------------------------------------------------------------
-/**
- * @brief	ディスクリプタヒープ制御クラス
- * 簡易シングルトンパターンで作成する
- */
+//簡易シングルトンパターンで作成する
+
 class DescriptorHeapContainer final {
 public:
-    //---------------------------------------------------------------------------------
-    /**
-     * @brief	インスタンスの取得
-     * @return	インスタンスの参照
-     */
+    //インスタンスの取得
     static DescriptorHeapContainer& instance() noexcept {
         static DescriptorHeapContainer instance;
         return instance;
     }
 
     //ディスクリプタヒープを生成する
-    [[nodiscard]] bool create(D3D12_DESCRIPTOR_HEAP_TYPE type, UINT numDescriptors, bool shaderVisible = false) noexcept;
-
+    bool create(D3D12_DESCRIPTOR_HEAP_TYPE type, UINT numDescriptors, bool shaderVisible = false) noexcept;
     //解放予約されているディスクリプタを解放する
 
     void applyPendingFree() noexcept;
 
     //ディスクリプタヒープを取得する
-    [[nodiscard]] ID3D12DescriptorHeap* get(D3D12_DESCRIPTOR_HEAP_TYPE type) const noexcept;
+    ID3D12DescriptorHeap* get(D3D12_DESCRIPTOR_HEAP_TYPE type) const noexcept;
 
     //ディスクリプタを確保する
-    [[nodiscard]] std::optional<UINT> allocateDescriptor(D3D12_DESCRIPTOR_HEAP_TYPE type) noexcept;
+    std::optional<UINT> allocateDescriptor(D3D12_DESCRIPTOR_HEAP_TYPE type) noexcept;
 
     //開放予定のディスクリプタを登録する
     void releaseDescriptor(D3D12_DESCRIPTOR_HEAP_TYPE type, UINT descriptorIndex) noexcept;
@@ -54,5 +46,5 @@ private:
     DescriptorHeapContainer& operator=(DescriptorHeapContainer&& r) = delete;
 
 private:
-    std::unordered_map<UINT, std::unique_ptr<DescriptorHeap>> map_{};  /// 種類毎のデスクリプタマップ
+    std::unordered_map<UINT, std::unique_ptr<Descriptor_Heap>> map_{};  /// 種類毎のデスクリプタマップ
 };

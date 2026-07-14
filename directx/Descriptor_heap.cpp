@@ -1,26 +1,26 @@
-#include "Descriptor_heap.h"
+#include"Descriptor_Heap.h"
 #include"Device.h"
 #include<cassert>
 #include<wrl/client.h>
 
 //ディスクリプタヒープ制御クラス
 
-class DescriptorHeap final {
+class Descriptor_Heap final {
 public:
    
    //コンストラクタ
    
-    DescriptorHeap() = default;
+    Descriptor_Heap() = default;
 
     
     //デストラクタ
     
-    ~DescriptorHeap() = default;
+    ~Descriptor_Heap() = default;
 
 public:
    
     // ディスクリプタヒープを生成する
-    [[nodiscard]] bool create(D3D12_DESCRIPTOR_HEAP_TYPE type, UINT numDescriptors, bool shaderVisible = false) noexcept {
+    bool create(D3D12_DESCRIPTOR_HEAP_TYPE type, UINT numDescriptors, bool shaderVisible = false) noexcept {
         // ヒープの設定
         D3D12_DESCRIPTOR_HEAP_DESC heapDesc{};
         heapDesc.Type = type;
@@ -61,7 +61,7 @@ public:
 
    
      // ディスクリプタヒープを取得する   
-    [[nodiscard]] ID3D12DescriptorHeap* get() const noexcept {
+    ID3D12DescriptorHeap* get() const noexcept {
         if (!heap_) {
             assert(false && "ディスクリプタヒープが未生成です");
         }
@@ -71,7 +71,7 @@ public:
 
     //ディスクリプタヒープのタイプを取得する
 
-    [[nodiscard]] D3D12_DESCRIPTOR_HEAP_TYPE getType() const noexcept {
+    D3D12_DESCRIPTOR_HEAP_TYPE getType() const noexcept {
         if (!heap_) {
             assert(false && "ディスクリプタヒープが未生成です");
         }
@@ -81,7 +81,7 @@ public:
 
 //ディスクリプタを確保する
 
-    [[nodiscard]] std::optional<UINT> allocateDescriptor() noexcept {
+    std::optional<UINT> allocateDescriptor() noexcept {
         if (freeIndices_.empty()) {
             assert(false && "ディスクリプタの空きがありません");
             return std::nullopt;
@@ -123,13 +123,13 @@ DescriptorHeapContainer::~DescriptorHeapContainer() {
 
 //ディスクリプタヒープを生成する
 
-[[nodiscard]] bool DescriptorHeapContainer::create(D3D12_DESCRIPTOR_HEAP_TYPE type, UINT numDescriptors, bool shaderVisible) noexcept {
+bool DescriptorHeapContainer::create(D3D12_DESCRIPTOR_HEAP_TYPE type, UINT numDescriptors, bool shaderVisible) noexcept {
     if (map_.find(type) != map_.end()) {
         // すでに作成済み
         return false;
     }
 
-    auto p = std::make_unique<DescriptorHeap>();
+    auto p = std::make_unique<Descriptor_Heap>();
     if (p->create(type, numDescriptors, shaderVisible)) {
         map_.emplace(type, std::move(p));
     }
@@ -149,7 +149,7 @@ void DescriptorHeapContainer::applyPendingFree() noexcept {
 
 //ディスクリプタヒープを取得する
 
-[[nodiscard]] ID3D12DescriptorHeap* DescriptorHeapContainer::get(D3D12_DESCRIPTOR_HEAP_TYPE type) const noexcept {
+ID3D12DescriptorHeap* DescriptorHeapContainer::get(D3D12_DESCRIPTOR_HEAP_TYPE type) const noexcept {
     const auto it = map_.find(type);
     if (it == map_.end()) {
         assert(false && "ディスクリプタヒープがありません");
@@ -161,7 +161,7 @@ void DescriptorHeapContainer::applyPendingFree() noexcept {
 
 
 //ディスクリプタを確保する
-[[nodiscard]] std::optional<UINT> DescriptorHeapContainer::allocateDescriptor(D3D12_DESCRIPTOR_HEAP_TYPE type) noexcept {
+std::optional<UINT> DescriptorHeapContainer::allocateDescriptor(D3D12_DESCRIPTOR_HEAP_TYPE type) noexcept {
     const auto it = map_.find(type);
     if (it == map_.end()) {
         assert(false && "ディスクリプタヒープがありません");

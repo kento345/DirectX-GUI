@@ -45,9 +45,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="directx\Descriptor_heap.h">
-      <Filter>directx</Filter>
-    </ClInclude>
     <ClInclude Include="directx\Device.h">
       <Filter>directx</Filter>
     </ClInclude>
@@ -141,6 +138,9 @@
     <ClInclude Include="object\Enemy.h">
       <Filter>object</Filter>
     </ClInclude>
+    <ClInclude Include="directx\Descriptor_Heap.h">
+      <Filter>directx</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx\Device.cpp">
@@ -162,9 +162,6 @@
       <Filter>directx</Filter>
     </ClCompile>
     <ClCompile Include="directx\Command_Queue.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\Descriptor_heap.cpp">
       <Filter>directx</Filter>
     </ClCompile>
     <ClCompile Include="window\Window.cpp">
@@ -206,9 +203,6 @@
     <ClCompile Include="draw_resorce\Triangle_Polygon.cpp">
       <Filter>draw_resorce</Filter>
     </ClCompile>
-    <ClCompile Include="entry\entry.cpp">
-      <Filter>entry</Filter>
-    </ClCompile>
     <ClCompile Include="editor\ImGuiManager.cpp">
       <Filter>editor</Filter>
     </ClCompile>
@@ -241,6 +235,12 @@
     </ClCompile>
     <ClCompile Include="object\Enemy.cpp">
       <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="entry\entry.cpp">
+      <Filter>entry</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Descriptor_Heap.cpp">
+      <Filter>directx</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
