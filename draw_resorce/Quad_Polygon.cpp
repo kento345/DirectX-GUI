@@ -45,7 +45,7 @@ bool Quad_Polygon::createVertexBuffer()noexcept {
 		nullptr,
 		IID_PPV_ARGS(&vertexBuffer_));
 	if (FAILED(res)) {
-		assert(false && "頂点バッファの作成に失敗");
+		assert(false && "頂点バッファの作成に失敗\0");
 		return false;
 	}
 
@@ -57,7 +57,7 @@ bool Quad_Polygon::createVertexBuffer()noexcept {
 	//vertexBuffer_を直接利用するのではなく,dataを介して更新するイメージ
 	res = vertexBuffer_->Map(0, nullptr, reinterpret_cast<void**>(&data));
 	if (FAILED(res)) {
-		assert(false && "頂点バッファのマップに失敗");
+		assert(false && "頂点バッファのマップに失敗\0");
 		return false;
 	}
 
@@ -123,7 +123,7 @@ bool Quad_Polygon::createIndexBuffer()noexcept {
 		nullptr,
 		IID_PPV_ARGS(&indexBuffer_));
 	if (FAILED(res)) {
-		assert(false && "インデックスバッファの作成に失敗");
+		assert(false && "インデックスバッファの作成に失敗\0");
 		return false;
 	}
 
@@ -131,7 +131,7 @@ bool Quad_Polygon::createIndexBuffer()noexcept {
 	uint16_t* data{};
 	res = indexBuffer_->Map(0, nullptr, reinterpret_cast<void**>(&data));
 	if (FAILED(res)) {
-		assert(false && "インデックスバッファのマップに失敗");
+		assert(false && "インデックスバッファのマップに失敗\0");
 		return false;
 	}
 

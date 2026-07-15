@@ -41,7 +41,7 @@ bool Pipline_State_Object::create(const Shader& shader, const Root_Signature& ro
 	rasterizerDesc.DepthClipEnable = true;
 	rasterizerDesc.AntialiasedLineEnable = false;
 	rasterizerDesc.ForcedSampleCount = 0;
-	rasterizerDesc.ConservativeRaster = D3D12_CONSERVATIVE_RASTERIZATION_MODE_OFF; = D3D12_CONSERVATIVE_RASTERIZATION_MODE_OFF;
+	rasterizerDesc.ConservativeRaster = D3D12_CONSERVATIVE_RASTERIZATION_MODE_OFF;
 
 	//頂点レイアウトの取得
 	const auto [inputElementDescs, numElements] = layout();
@@ -64,7 +64,7 @@ bool Pipline_State_Object::create(const Shader& shader, const Root_Signature& ro
 	psoDesc.SampleDesc.Count = 1;
 	auto res = Device::instance().get()->CreateGraphicsPipelineState(&psoDesc, IID_PPV_ARGS(&pipelineState_));
 	if (FAILED(res)) {
-		assert(false && "パイプラインステートの作成に失敗");
+		assert(false && "パイプラインステートの作成に失敗\0");
 	}
 	return true;
 }
@@ -73,7 +73,7 @@ bool Pipline_State_Object::create(const Shader& shader, const Root_Signature& ro
 //パイプラインステートのポインタを返す
 ID3D12PipelineState* Pipline_State_Object::get() const noexcept {
 	if (!pipelineState_) {
-		assert(false && "パイプラインステートが未作成です");
+		assert(false && "パイプラインステートが未作成です\0");
 	}
 	return pipelineState_.Get();
 }

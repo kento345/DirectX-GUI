@@ -11,7 +11,7 @@ public:
 	//コンストラクター
 	Render_Target() = default;
 	//デストラクター
-	~Render_Target() = default;
+	~Render_Target();
 
 	//バックバッファを生成する
 	//生成成否を返す
@@ -19,7 +19,7 @@ public:
 
 	//レンダーターゲットを作成する
 	//生成成否を返すs
-	bool createrenderTarget(UINT w, UINT h, DXGI_FORMAT fromat, UINT num)noexcept;
+	bool createrenderTarget(UINT w, UINT h, DXGI_FORMAT format, UINT num)noexcept;
 
 	//ビュー(ディスクリプタハンドル)を取得
 	//ディスクリプタハンドルを返す

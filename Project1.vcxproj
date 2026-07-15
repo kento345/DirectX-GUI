@@ -43,7 +43,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -146,6 +146,14 @@
     <ClInclude Include="editor\content\Blur_Editor.h" />
     <ClInclude Include="editor\content\Game_Object_Editor.h" />
     <ClInclude Include="editor\ImGuiManager.h" />
+    <ClInclude Include="external\imgui\backends\imgui_impl_dx12.h" />
+    <ClInclude Include="external\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="external\imgui\imconfig.h" />
+    <ClInclude Include="external\imgui\imgui.h" />
+    <ClInclude Include="external\imgui\imgui_internal.h" />
+    <ClInclude Include="external\imgui\imstb_rectpack.h" />
+    <ClInclude Include="external\imgui\imstb_textedit.h" />
+    <ClInclude Include="external\imgui\imstb_truetype.h" />
     <ClInclude Include="object\Bullet.h" />
     <ClInclude Include="object\Camera.h" />
     <ClInclude Include="object\Enemy.h" />
@@ -181,6 +189,13 @@
     <ClCompile Include="editor\content\Game_Object_Editor.cpp" />
     <ClCompile Include="editor\ImGuiManager.cpp" />
     <ClCompile Include="entry\entry.cpp" />
+    <ClCompile Include="external\imgui\backends\imgui_impl_dx12.cpp" />
+    <ClCompile Include="external\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="external\imgui\imgui.cpp" />
+    <ClCompile Include="external\imgui\imgui_demo.cpp" />
+    <ClCompile Include="external\imgui\imgui_draw.cpp" />
+    <ClCompile Include="external\imgui\imgui_tables.cpp" />
+    <ClCompile Include="external\imgui\imgui_widgets.cpp" />
     <ClCompile Include="object\Bullet.cpp" />
     <ClCompile Include="object\Camera.cpp" />
     <ClCompile Include="object\Enemy.cpp" />
@@ -193,16 +208,16 @@
     <ClCompile Include="window\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="blur.hlsli">
+    <None Include="asset\blur.hlsl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
-    <None Include="down_sample.hlsli">
+    <None Include="asset\down_sample.hlsl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
-    <None Include="screen_texture.hlsli">
+    <None Include="asset\screen_texture.hlsl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
-    <None Include="shader.hlsli">
+    <None Include="asset\shader.hlsl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
   </ItemGroup>

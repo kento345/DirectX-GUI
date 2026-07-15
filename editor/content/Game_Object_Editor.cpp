@@ -8,7 +8,7 @@ namespace dev::editor {
 	//オブジェクトのImGuiデバッグウィンドウを構築
 	void Game_Object_Editor::draw()noexcept {
 		//ウィンドウ:ゲームオブジェクト管理設定
-		ImGui::Begin("ゲームオブジェクト管理設定");
+		ImGui::Begin("ゲームオブジェクト管理設定\0");
 		{
 			static int selectedIndex{};   //選択されたオブジェクト
 			const auto& types = game::Game_Object_Manager::instance().typeIds();//オブジェクトタイプのリスト取得
@@ -22,7 +22,7 @@ namespace dev::editor {
 			}
 
 			//コンボボックスでオブジェクトタイプを選択
-			ImGui::Combo("##オブジェクトタイプ", &selectedIndex, itemPtrs.data(), static_cast<int>(itemPtrs.size()));
+			ImGui::Combo("##オブジェクトタイプ\0", &selectedIndex, itemPtrs.data(), static_cast<int>(itemPtrs.size()));
 			ImGui::SameLine();
 			if (ImGui::Button("生成")) {
 				//選択されたオブジェクトタイプIDに対応するオブジェクトを生成する

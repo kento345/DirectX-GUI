@@ -34,7 +34,7 @@ bool Render_Target::createBackBuffer(const Swap_Chain& swapChain)noexcept {
 }
 
 //レンダーターゲットを作成
-bool Render_Target::createrenderTarget(UINT w, UINT h, DXGI_FORMAT fromat, UINT num) noexcept
+bool Render_Target::createrenderTarget(UINT w, UINT h, DXGI_FORMAT format, UINT num) noexcept
 {
 	//desc作成
 	D3D12_RESOURCE_DESC desc{};
@@ -43,7 +43,7 @@ bool Render_Target::createrenderTarget(UINT w, UINT h, DXGI_FORMAT fromat, UINT 
 	desc.Height = h;
 	desc.DepthOrArraySize = 1;
 	desc.MipLevels = 1;
-	desc.Format = fromat;
+	desc.Format = format;
 	desc.SampleDesc.Count = 1;
 	desc.SampleDesc.Quality = 0;
 	desc.Layout = D3D12_TEXTURE_LAYOUT_UNKNOWN;
@@ -59,6 +59,7 @@ bool Render_Target::createrenderTarget(UINT w, UINT h, DXGI_FORMAT fromat, UINT 
 
 	//レンダーターゲット用クリア値
 	D3D12_CLEAR_VALUE clearValue{};
+	clearValue.Format = format;
 	clearValue.Color[0] = 0.0f;
 	clearValue.Color[1] = 0.0f;
 	clearValue.Color[2] = 0.0f;
@@ -66,7 +67,7 @@ bool Render_Target::createrenderTarget(UINT w, UINT h, DXGI_FORMAT fromat, UINT 
 
 	for (UINT i = 0;i < num;i++) {
 		//レンダーターゲットリソースの生成
-		Microsoft::WRL::ComPtr<ID3D12Resource> rendertarget{};
+		Microsoft::WRL::ComPtr<ID3D12Resource> renderTarget{};
 
 		const auto hr = Device::instance().get()->CreateCommittedResource(
 			&heapProps,
@@ -74,15 +75,14 @@ bool Render_Target::createrenderTarget(UINT w, UINT h, DXGI_FORMAT fromat, UINT 
 			&desc,
 			D3D12_RESOURCE_STATE_RENDER_TARGET,
 			&clearValue,
-			IID_PPV_ARGS(&rendertarget)
-		);
+			IID_PPV_ARGS(&renderTarget));
 		if (FAILED(hr)) {
 			assert(false && "レンダーターゲットの作成に失敗しました");
 			return false;
 		}
 
 		//レンダーターゲットリソースを配列に追加
-		renderTargets_.emplace_back(std::move(rendertarget));
+		renderTargets_.emplace_back(std::move(renderTarget));
 	}
 
 	//ビュー作成
@@ -100,7 +100,7 @@ bool Render_Target::createrenderTarget(UINT w, UINT h, DXGI_FORMAT fromat, UINT 
 //ビュー(ディスクリプタハンドル)を取得
 D3D12_CPU_DESCRIPTOR_HANDLE Render_Target::getCpuDescriptorHandle(UINT index)const noexcept {
 	if (index >= renderTargets_.size() || !renderTargets_[index] || rtvDescriptorIndex_.size() != renderTargets_.size()) {
-		assert(false && "不正なレンダーターゲットです");
+		assert(false && "不正なレンダーターゲットです\0");
 	}
 
 	constexpr auto heapType = D3D12_DESCRIPTOR_HEAP_TYPE_RTV;
@@ -141,7 +141,7 @@ D3D12_GPU_DESCRIPTOR_HANDLE Render_Target::getGpuDescriptorHandle(UINT index)con
 //レンダーターゲットを取得
 ID3D12Resource* Render_Target::get(UINT index) const noexcept {
 	if (index >= renderTargets_.size() || !renderTargets_[index]) {
-		assert(false && "不正なレンダーターゲットです");
+		assert(false && "不正なレンダーターゲットです\0");
 		return nullptr;
 	}
 	return renderTargets_[index].Get();
@@ -150,7 +150,7 @@ ID3D12Resource* Render_Target::get(UINT index) const noexcept {
 //テクスチャサイズを取得
 std::pair<UINT, UINT> Render_Target::size()const noexcept {
 	if (renderTargets_.empty()) {
-		assert(false && "不正なレンダーターゲットです");
+		assert(false && "不正なレンダーターゲットです\0");
 		return {};
 	}
 
@@ -168,7 +168,7 @@ bool Render_Target::createRenderTargetView()noexcept {
 		//ディスクリプタの確保
 		const auto descriptorIndex = DescriptorHeapContainer::instance().allocateDescriptor(heapType);
 		if (!descriptorIndex.has_value()) {
-			assert(false && "レンダーターゲットのディスクリプタ確保に失敗");
+			assert(false && "レンダーターゲットのディスクリプタ確保に失敗\0");
 			return false;
 		}
 		auto index = descriptorIndex.value();

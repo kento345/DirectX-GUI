@@ -160,7 +160,7 @@ public:
 	template <class T>
 	bool createFromProvider() noexcept {
 		T provider;
-		return create(rootParameters.rootSignatureDesc);
+		return create(provider.rootSignatureDesc);
 	}
 	//ルートシグネチャを作成
 	bool create(const D3D12_ROOT_SIGNATURE_DESC& desc) noexcept; 

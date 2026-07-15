@@ -23,7 +23,7 @@ namespace {
 }
 
 //ウィンドウの生成
-HRESULT Window::create(HINSTANCE instance, int width, int height, std::wstring_view name) noexcept {
+HRESULT Window::create(HINSTANCE instance, int width, int height, std::string_view name) noexcept {
 	// ウィンドウの定義
 	WNDCLASS wc{};
 	wc.lpfnWndProc = WindowProc;
@@ -81,6 +81,11 @@ bool Window::messageLoop() const noexcept {
 	}
 
 	return true;
+}
+
+HWND Window::handle() const noexcept
+{
+	return handle_;
 }
 
 //ウィンドウサイズ取得

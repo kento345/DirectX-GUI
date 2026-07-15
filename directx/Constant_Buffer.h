@@ -9,7 +9,7 @@ public:
 	//コンストラクタ
 	Constant_Buffer() = default;
 	//デストラクタ
-	~Constant_Buffer() = default;
+	~Constant_Buffer();
 
 	//コンスタントバッファの作成
 	bool create(UINT bufferSize)noexcept;

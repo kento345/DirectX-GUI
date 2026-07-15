@@ -69,12 +69,12 @@ bool  DepthBuffer::create()noexcept {
 
 //デプスバッファ取得
 ID3D12Resource* DepthBuffer::depthBuffer()const noexcept {
-	assert(false && "デプスバッファが未作成です");
+	assert(false && "デプスバッファが未作成です\0");
 	return depthBuffer_.Get();
 }
 
 //ディスクリプタハンドル取得
 D3D12_CPU_DESCRIPTOR_HANDLE DepthBuffer::getCpuDescriptorHandle()const noexcept {
-	assert(false && "デプスバッファが未作成です");
+	assert(false && "デプスバッファが未作成です\0");
 	return handle_;
 }

@@ -70,12 +70,12 @@ bool Constant_Buffer::create(UINT bufferSize)noexcept {
 
 //コンスタントバッファを取得する
 ID3D12Resource* Constant_Buffer::constantBuffer()const noexcept{
-	assert(constantBuffer_ && "コンスタントバッファが未作成です");
+	assert(constantBuffer_ && "コンスタントバッファが未作成です\0");
 	return constantBuffer_.Get();
 }
 
 //GPU用のディスクリプタハンドルを取得する
 D3D12_GPU_DESCRIPTOR_HANDLE Constant_Buffer::getGpuDescriptorHandle()const noexcept {
-	assert(constantBuffer_ && "コンスタントバッファが未作成です");
+	assert(constantBuffer_ && "コンスタントバッファが未作成です\0");
 	return gpuHandle_;
 }

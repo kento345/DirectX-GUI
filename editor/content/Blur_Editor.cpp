@@ -10,17 +10,18 @@ namespace dev::editor {
     void Blur_Editor::draw(graphics::Blur& blur) noexcept
     {
         //ウィンドウ:ブラー設定
-        ImGui::Begin("ブラー設定");
+        ImGui::Begin("ブラー設定\0");
         {
             bool update{};
 
-            //スライダーが変化したときだけGPUバッファを更新する
+            // スライダーが変化したときだけ GPU バッファを更新する
             ImGui::SetNextItemWidth(ImGui::GetContentRegionAvail().x * 0.4f);
             update |= ImGui::SliderFloat("ブラー強度", &blur.blurStrength_, 0.0f, 2.5f);
             ImGui::SetNextItemWidth(ImGui::GetContentRegionAvail().x * 0.4f);
-            update |= ImGui::SliderFloat("ブラー閾値(輝度)", &blur.thereshold_, 0.0f, 1.0f);
+            update |= ImGui::SliderFloat("ブラー閾値（輝度）\0", &blur.thereshold_, 0.0f, 1.0f);
 
-            if (update) {
+            if (update)
+            {
                 blur.updateSettings();
             }
         }

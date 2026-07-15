@@ -53,7 +53,7 @@ public:
 	//アプリケーションの初期化
 	HRESULT initialize(HINSTANCE instance)noexcept {
 		//ウィンドウ生成
-		if (S_OK != Window::instance().create(instance, 1280, 720, L"MyApp")) {
+		if (S_OK != Window::instance().create(instance, 1280, 720, "MyApp")) {
 			assert(false && "ウィンドウの生成に失敗しました");
 			return false;
 		}

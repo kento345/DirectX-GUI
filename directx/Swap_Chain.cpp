@@ -27,7 +27,7 @@ bool Swap_Chain::create(const Command_Queue& commandQueue) noexcept {
 			nullptr,
 			tempSwapChain.GetAddressOf());
 		if (FAILED(hr)) {
-			assert(false && "スワップチェーンの作成に失敗");
+			assert(false && "スワップチェーンの作成に失敗\0");
 			return false;
 		}
 	}
@@ -36,7 +36,7 @@ bool Swap_Chain::create(const Command_Queue& commandQueue) noexcept {
 		//一時的なスワップチェインをIDXGISwapChain3に変換
 		const auto hr = tempSwapChain->QueryInterface(IID_PPV_ARGS(&swapChain_));
 		if (FAILED(hr)) {
-			assert(false && "スワップチェインのアップグレートに失敗");
+			assert(false && "スワップチェインのアップグレートに失敗\0");
 			return false;
 		}
 	}
@@ -47,7 +47,7 @@ bool Swap_Chain::create(const Command_Queue& commandQueue) noexcept {
 //スワップチェインのポインタを返す
 IDXGISwapChain3* Swap_Chain::get()const noexcept {
 	if (!swapChain_) {
-		assert(false && "スワップチェインが未作成です");
+		assert(false && "スワップチェインが未作成です\0");
 	}
 	return swapChain_.Get();
 }
@@ -56,7 +56,7 @@ IDXGISwapChain3* Swap_Chain::get()const noexcept {
 //スワップチェインの設定を返す
 const DXGI_SWAP_CHAIN_DESC1& Swap_Chain::getDesc()const noexcept {
 	if (!swapChain_) {
-		assert(false && "スワップチェインが未作成です");
+		assert(false && "スワップチェインが未作成です\0");
 	}
 	return swapChainDesc_;
 }

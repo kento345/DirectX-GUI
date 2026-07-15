@@ -1,7 +1,6 @@
 #pragma once
 
 #if defined(_DEBUG)
-
 #include"../../object/Game_Object.h"
 
 namespace dev::editor {

@@ -43,20 +43,17 @@
     <Filter Include="render\post_proc">
       <UniqueIdentifier>{c0df3066-c21d-4ded-a997-db398cfbd7a5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{8073a5ce-ffec-467f-9af3-2000f8ffdd7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\imgui">
+      <UniqueIdentifier>{d3fdd2d5-51d7-4bf5-b3be-d86fbe05c3f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\imgui\backends">
+      <UniqueIdentifier>{8cce6da0-5b57-4580-bd03-6cda426db4d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="directx\Device.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\DXGI.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\Fence.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\Shader.h">
-      <Filter>directx</Filter>
-    </ClInclude>
     <ClInclude Include="directx\Command_Allocator.h">
       <Filter>directx</Filter>
     </ClInclude>
@@ -66,37 +63,43 @@
     <ClInclude Include="directx\Command_Queue.h">
       <Filter>directx</Filter>
     </ClInclude>
-    <ClInclude Include="window\Window.h">
-      <Filter>window</Filter>
-    </ClInclude>
     <ClInclude Include="directx\Constant_Buffer.h">
       <Filter>directx</Filter>
     </ClInclude>
     <ClInclude Include="directx\DepthBuffer.h">
       <Filter>directx</Filter>
     </ClInclude>
-    <ClInclude Include="window\Input.h">
-      <Filter>window</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\Pipline_State_Object.h">
+    <ClInclude Include="directx\Descriptor_Heap.h">
       <Filter>directx</Filter>
     </ClInclude>
-    <ClInclude Include="directx\Root_Signature.h">
+    <ClInclude Include="directx\Device.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\DXGI.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\Fence.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\Pipline_State_Object.h">
       <Filter>directx</Filter>
     </ClInclude>
     <ClInclude Include="directx\Render_Target.h">
       <Filter>directx</Filter>
     </ClInclude>
+    <ClInclude Include="directx\Root_Signature.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\Shader.h">
+      <Filter>directx</Filter>
+    </ClInclude>
     <ClInclude Include="directx\Swap_Chain.h">
       <Filter>directx</Filter>
     </ClInclude>
-    <ClInclude Include="draw_resorce\Quad_Polygon.h">
+    <ClInclude Include="draw_resorce\Screen_Polygon.h">
       <Filter>draw_resorce</Filter>
     </ClInclude>
     <ClInclude Include="draw_resorce\Shape.h">
-      <Filter>draw_resorce</Filter>
-    </ClInclude>
-    <ClInclude Include="draw_resorce\Screen_Polygon.h">
       <Filter>draw_resorce</Filter>
     </ClInclude>
     <ClInclude Include="draw_resorce\Shape_Container.h">
@@ -105,19 +108,25 @@
     <ClInclude Include="draw_resorce\Triangle_Polygon.h">
       <Filter>draw_resorce</Filter>
     </ClInclude>
+    <ClInclude Include="draw_resorce\Quad_Polygon.h">
+      <Filter>draw_resorce</Filter>
+    </ClInclude>
     <ClInclude Include="editor\ImGuiManager.h">
       <Filter>editor</Filter>
-    </ClInclude>
-    <ClInclude Include="editor\content\Game_Object_Editor.h">
-      <Filter>editor\content</Filter>
-    </ClInclude>
-    <ClInclude Include="render\post_proc\Blur.h">
-      <Filter>render\post_proc</Filter>
     </ClInclude>
     <ClInclude Include="editor\content\Blur_Editor.h">
       <Filter>editor\content</Filter>
     </ClInclude>
+    <ClInclude Include="editor\content\Game_Object_Editor.h">
+      <Filter>editor\content</Filter>
+    </ClInclude>
     <ClInclude Include="object\Bullet.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\Camera.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\Enemy.h">
       <Filter>object</Filter>
     </ClInclude>
     <ClInclude Include="object\Game_Object.h">
@@ -132,29 +141,41 @@
     <ClInclude Include="object\Player.h">
       <Filter>object</Filter>
     </ClInclude>
-    <ClInclude Include="object\Camera.h">
-      <Filter>object</Filter>
+    <ClInclude Include="render\post_proc\Blur.h">
+      <Filter>render\post_proc</Filter>
     </ClInclude>
-    <ClInclude Include="object\Enemy.h">
-      <Filter>object</Filter>
+    <ClInclude Include="window\Input.h">
+      <Filter>window</Filter>
     </ClInclude>
-    <ClInclude Include="directx\Descriptor_Heap.h">
-      <Filter>directx</Filter>
+    <ClInclude Include="window\Window.h">
+      <Filter>window</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imconfig.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui_internal.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imstb_rectpack.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imstb_textedit.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imstb_truetype.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\backends\imgui_impl_dx12.h">
+      <Filter>external\imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\backends\imgui_impl_win32.h">
+      <Filter>external\imgui\backends</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="directx\Device.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\DXGI.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\Fence.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\Shader.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
     <ClCompile Include="directx\Command_Allocator.cpp">
       <Filter>directx</Filter>
     </ClCompile>
@@ -164,37 +185,43 @@
     <ClCompile Include="directx\Command_Queue.cpp">
       <Filter>directx</Filter>
     </ClCompile>
-    <ClCompile Include="window\Window.cpp">
-      <Filter>window</Filter>
-    </ClCompile>
     <ClCompile Include="directx\Constant_Buffer.cpp">
       <Filter>directx</Filter>
     </ClCompile>
     <ClCompile Include="directx\DepthBuffer.cpp">
       <Filter>directx</Filter>
     </ClCompile>
-    <ClCompile Include="window\Input.cpp">
-      <Filter>window</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\Pipline_State_Object.cpp">
+    <ClCompile Include="directx\Descriptor_Heap.cpp">
       <Filter>directx</Filter>
     </ClCompile>
-    <ClCompile Include="directx\Root_Signature.cpp">
+    <ClCompile Include="directx\Device.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\DXGI.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Fence.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Pipline_State_Object.cpp">
       <Filter>directx</Filter>
     </ClCompile>
     <ClCompile Include="directx\Render_Target.cpp">
       <Filter>directx</Filter>
     </ClCompile>
+    <ClCompile Include="directx\Root_Signature.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\Shader.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
     <ClCompile Include="directx\Swap_Chain.cpp">
       <Filter>directx</Filter>
     </ClCompile>
-    <ClCompile Include="draw_resorce\Quad_Polygon.cpp">
+    <ClCompile Include="draw_resorce\Screen_Polygon.cpp">
       <Filter>draw_resorce</Filter>
     </ClCompile>
     <ClCompile Include="draw_resorce\Shape.cpp">
-      <Filter>draw_resorce</Filter>
-    </ClCompile>
-    <ClCompile Include="draw_resorce\Screen_Polygon.cpp">
       <Filter>draw_resorce</Filter>
     </ClCompile>
     <ClCompile Include="draw_resorce\Shape_Container.cpp">
@@ -203,19 +230,25 @@
     <ClCompile Include="draw_resorce\Triangle_Polygon.cpp">
       <Filter>draw_resorce</Filter>
     </ClCompile>
+    <ClCompile Include="draw_resorce\Quad_Polygon.cpp">
+      <Filter>draw_resorce</Filter>
+    </ClCompile>
     <ClCompile Include="editor\ImGuiManager.cpp">
       <Filter>editor</Filter>
-    </ClCompile>
-    <ClCompile Include="editor\content\Game_Object_Editor.cpp">
-      <Filter>editor\content</Filter>
-    </ClCompile>
-    <ClCompile Include="render\post_proc\Blur.cpp">
-      <Filter>render\post_proc</Filter>
     </ClCompile>
     <ClCompile Include="editor\content\Blur_Editor.cpp">
       <Filter>editor\content</Filter>
     </ClCompile>
+    <ClCompile Include="editor\content\Game_Object_Editor.cpp">
+      <Filter>editor\content</Filter>
+    </ClCompile>
     <ClCompile Include="object\Bullet.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\Camera.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\Enemy.cpp">
       <Filter>object</Filter>
     </ClCompile>
     <ClCompile Include="object\Game_Object.cpp">
@@ -230,30 +263,51 @@
     <ClCompile Include="object\Player.cpp">
       <Filter>object</Filter>
     </ClCompile>
-    <ClCompile Include="object\Camera.cpp">
-      <Filter>object</Filter>
+    <ClCompile Include="render\post_proc\Blur.cpp">
+      <Filter>render\post_proc</Filter>
     </ClCompile>
-    <ClCompile Include="object\Enemy.cpp">
-      <Filter>object</Filter>
+    <ClCompile Include="window\Input.cpp">
+      <Filter>window</Filter>
+    </ClCompile>
+    <ClCompile Include="window\Window.cpp">
+      <Filter>window</Filter>
     </ClCompile>
     <ClCompile Include="entry\entry.cpp">
       <Filter>entry</Filter>
     </ClCompile>
-    <ClCompile Include="directx\Descriptor_Heap.cpp">
-      <Filter>directx</Filter>
+    <ClCompile Include="external\imgui\imgui.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_demo.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_draw.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_tables.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_widgets.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\backends\imgui_impl_dx12.cpp">
+      <Filter>external\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>external\imgui\backends</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shader.hlsli">
+    <None Include="asset\down_sample.hlsl">
       <Filter>asset</Filter>
     </None>
-    <None Include="screen_texture.hlsli">
+    <None Include="asset\screen_texture.hlsl">
       <Filter>asset</Filter>
     </None>
-    <None Include="down_sample.hlsli">
+    <None Include="asset\shader.hlsl">
       <Filter>asset</Filter>
     </None>
-    <None Include="blur.hlsli">
+    <None Include="asset\blur.hlsl">
       <Filter>asset</Filter>
     </None>
   </ItemGroup>

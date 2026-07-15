@@ -63,7 +63,7 @@ public:
      // ディスクリプタヒープを取得する   
     ID3D12DescriptorHeap* get() const noexcept {
         if (!heap_) {
-            assert(false && "ディスクリプタヒープが未生成です");
+            assert(false && "ディスクリプタヒープが未生成です\0");
         }
         return heap_.Get();
     }
@@ -73,7 +73,7 @@ public:
 
     D3D12_DESCRIPTOR_HEAP_TYPE getType() const noexcept {
         if (!heap_) {
-            assert(false && "ディスクリプタヒープが未生成です");
+            assert(false && "ディスクリプタヒープが未生成です\0");
         }
         return type_;
     }

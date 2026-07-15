@@ -22,7 +22,7 @@ namespace game {
 		void update()noexcept;
 
 		//管理オブジェクトの後更新
-		void	 postUpdate()noexcept;
+		void postUpdate()noexcept;
 
 		//管理オブジェクトの描画
 		void draw(const Command_List& commandList)noexcept;
@@ -55,7 +55,7 @@ namespace game {
 		Game_Object_Manager() = default;
 
 		//デストラクタ
-		~Game_Object_Manager() = default;
+		~Game_Object_Manager();
 
 		//コピーとムーブの禁止
 		Game_Object_Manager(const Game_Object_Manager& r) = delete;
@@ -84,7 +84,7 @@ namespace game {
 		//オブジェクト生成
 		template<typename T,typename... Args>
 		UINT64 createObject(Args&&... args)noexcept {
-			static_assert(std::is_base_of<Game_Object, T>::value, "GameObjectではないものを作ろうとしています");
+			static_assert(std::is_base_of<Game_Object, T>::value, "GameObjectではないものを作ろうとしています\0");
 			const auto handle = ++counter_;
 
 			//パラメータパックを完全転送で展開してコンストラクタ引数にしてTを生成

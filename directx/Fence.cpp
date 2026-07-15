@@ -10,7 +10,7 @@ bool Fence::create() noexcept {
 	}
 	//GPU　同期用のイベントハンドルを作成
 	// --------------------ここがエラー----------------------
-	waitGpuEvent_ = CreateEvent(nullptr, false, false,L"WAIT_GPU");
+	waitGpuEvent_ = CreateEvent(nullptr, false, false,"WAIT_GPU");
 	//-------------------------------------------------------
 	if (!waitGpuEvent_) {
 		assert(false && "GPU 同期用イベントハンドルの作成に失敗しました");
@@ -23,7 +23,7 @@ bool Fence::create() noexcept {
 
 void Fence::wait(UINT64 fenceValue) const noexcept {
 	if (!fence_) {
-		assert(false && "フェンスが未作成です");
+		assert(false && "フェンスが未作成です\0");
 		return ;
 	}
 	//フェンスの値が指定されました値に達するまで待機
@@ -37,7 +37,7 @@ void Fence::wait(UINT64 fenceValue) const noexcept {
 //フェンスを取得
 ID3D12Fence* Fence::get()const noexcept {
 	if (!fence_) {
-		assert(false && "フェンスが未作成です");
+		assert(false && "フェンスが未作成です\0");
 	}
 	return fence_.Get();
 }

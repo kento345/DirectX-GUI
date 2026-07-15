@@ -19,7 +19,7 @@ bool Command_List::create(const Command_Allocator& command_Allocator)noexcept {
 //コマンドリストのリセット
 void Command_List::reset(const Command_Allocator& command_Allocator)noexcept {
 	if (!commandList_) {
-		assert(false && "コマンドリストが未作成です");
+		assert(false && "コマンドリストが未作成です\0");
 	}
 	//コマンドリストをリセット
 	commandList_->Reset(command_Allocator.get(), nullptr);
@@ -28,7 +28,7 @@ void Command_List::reset(const Command_Allocator& command_Allocator)noexcept {
 //コマンドリストを取得する
 ID3D12GraphicsCommandList* Command_List::get() const noexcept {
 	if (!commandList_) {
-		assert(false && "コマンドリストが未作成です");
+		assert(false && "コマンドリストが未作成です\0");
 	}
 	return commandList_.Get();
 }
